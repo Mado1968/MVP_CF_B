@@ -1,0 +1,1 @@
+export const safetyGuard = (req, res, next) => next()
