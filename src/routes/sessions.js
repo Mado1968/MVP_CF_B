@@ -1,6 +1,3 @@
-/*
-*/
-
 import { Router } from 'express'
 import * as sessionRepo from '../db/repositories/sessionRepo.js'
 
