@@ -16,7 +16,13 @@ app.use(
     contentSecurityPolicy: false,
   })
 )
-app.use(cors({ accessControlAllowOrigin: config.corsOrigin }))
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://mvp-cf-f.vercel.app"
+  ],
+  credentials: true
+}));
 app.use(express.json())
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 200 }))
 
