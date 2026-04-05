@@ -23,7 +23,7 @@ app.use(cors({
 }));
 app.use(express.json())
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 200 }))
-app.use('/routes/sessions', sessionsRouter)
+
 app.use('/routes/sessions', sessionsRoutes)
 app.use('/routes/flow',     flowRoutes)
 app.use('/routes/profiles', profilesRoutes)
