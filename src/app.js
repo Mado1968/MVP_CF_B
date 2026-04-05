@@ -17,8 +17,7 @@ app.use(
   })
 )
 app.use(cors({
-  origin: 
-    "https://mvp-cf-f.vercel.app",
+  origin:"https://mvpcfb-production.up.railway.app/api/sessions",
      credentials: true
 }));
 app.use(express.json())
