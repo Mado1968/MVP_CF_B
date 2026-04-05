@@ -23,11 +23,11 @@ app.use(cors({
 }));
 app.use(express.json())
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 200 }))
-
-app.use('/api/sessions', sessionsRoutes)
-app.use('/api/flow',     flowRoutes)
-app.use('/api/profiles', profilesRoutes)
-app.use('/api/safety',   safetyRoutes)
+app.use('/routes/sessions', sessionsRouter)
+app.use('/routes/sessions', sessionsRoutes)
+app.use('/routes/flow',     flowRoutes)
+app.use('/routes/profiles', profilesRoutes)
+app.use('/routes/safety',   safetyRoutes)
 
 app.use(errorHandler)
 export default app
